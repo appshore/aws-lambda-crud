@@ -4,9 +4,9 @@ import { failure, success } from '../common/response';
 export async function main(event, context) {
   const params = {
     TableName: process.env.tableName,
-    FilterExpression: 'parentId = :orgId',
+    FilterExpression: 'parentId = :parentId',
     ExpressionAttributeValues: {
-      ':orgId': event.pathParameters.orgId
+      ':parentId': event.pathParameters.parentId
     }
   };
 
