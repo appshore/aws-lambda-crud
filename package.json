@@ -1,0 +1,28 @@
+{
+  "name": "awslambdacrud",
+  "version": "1.1.0",
+  "description": "CRUD operations with AWS Lambda and DynamoDB",
+  "main": "handler.js",
+  "scripts": {
+    "test": "serverless-bundle test",
+    "mock:create": "serverless invoke local --function create --path mocks/create.json",
+    "mock:createWithParent": "serverless invoke local --function create --path mocks/createWithParent.json",
+    "mock:delete": "serverless invoke local --function delete --path mocks/delete.json",
+    "mock:list": "serverless invoke local --function list",
+    "mock:listByParentId": "serverless invoke local --function listByParentId --path mocks/listByParentId.json",
+    "mock:read": "serverless invoke local --function read --path mocks/read.json",
+    "mock:readByName": "serverless invoke local --function readByName --path mocks/readByName.json",
+    "mock:update": "serverless invoke local --function update --path mocks/update.json"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "aws-sdk": "^2.562.0",
+    "jest": "^24.9.0",
+    "serverless-bundle": "^1.2.5",
+    "serverless-dotenv-plugin": "^2.1.1",
+    "serverless-offline": "^5.3.3"
+  },
+  "dependencies": {
+    "uuid": "^3.3.3"
+  }
+}
