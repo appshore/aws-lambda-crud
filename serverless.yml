@@ -63,7 +63,7 @@ functions:
     handler: src/handlers/listByParentId.main
     events:
       - http:
-          path: org/{parentId}
+          path: org/sub/{parentId}
           method: get
           cors: true
           authorizer: aws_iam
@@ -79,7 +79,7 @@ functions:
     handler: src/handlers/readByName.main
     events:
       - http:
-          path: org/{name}
+          path: org/name/{name}
           method: get
           cors: true
           authorizer: aws_iam
