@@ -5,9 +5,9 @@ export async function main(event, context) {
   const params = {
     TableName: process.env.tableName,
     IndexName: "name-index",
-    KeyConditionExpression: "nameOrg = :nameOrg",
+    KeyConditionExpression: "name = :name",
     ExpressionAttributeValues: {
-      ":nameOrg": event.pathParameters.nameOrg
+      ":name": event.pathParameters.name
     }
   };
 
