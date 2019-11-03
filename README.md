@@ -15,19 +15,6 @@ npm -g i serverless
 npm install
 ```
 
-## Development
-
-```
-# Run lint
-npm run lint
-
-# Run tests
-npm run tests
-
-# Start serverless offline
-serverless offline start
-```
-
 ## Run locally lambda functions:
 
 ```
@@ -47,3 +34,7 @@ npm run mock:readByName
 
 npm run mock:update
 ```
+
+## Run with Postman online:
+
+Load in Postman the JSON file called test.postman_collection.json. It contains a collection of all CRUD operations.
