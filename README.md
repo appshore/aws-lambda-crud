@@ -28,7 +28,7 @@ npm run tests
 serverless offline start
 ```
 
-## Run lambda functions:
+## Run locally lambda functions:
 
 ```
 npm run mock:create
