@@ -9,10 +9,11 @@ export async function main(event, context) {
       orgId: event.pathParameters.orgId
     },
     ConditionExpression: 'orgId = :orgId',
-    UpdateExpression: 'SET parentId = :parentId, foundedAt = :foundedAt',
+    UpdateExpression: 'SET parentId = :parentId, foundedAt = :foundedAt, revenue = :revenue',
     ExpressionAttributeValues: {
       ':orgId': event.pathParameters.orgId,
       ':parentId': data.parentId || null,
+      ':revenue': data.revenue || null,
       ':foundedAt': data.foundedAt || null
     },
     ReturnValues: 'ALL_NEW'
