@@ -79,7 +79,7 @@ functions:
     handler: src/handlers/readByName.main
     events:
       - http:
-          path: org/name/{orgName}
+          path: org/name/{nameOrg}
           method: get
           cors: true
           # authorizer: aws_iam

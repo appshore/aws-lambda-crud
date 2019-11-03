@@ -8,9 +8,9 @@ export async function main(event, context) {
     Key: {
       orgId: event.pathParameters.orgId
     },
-    UpdateExpression: 'SET orgName = :orgName, parentId = :parentId, foundedAt = :foundedAt',
+    UpdateExpression: 'SET nameOrg = :nameOrg, parentId = :parentId, foundedAt = :foundedAt',
     ExpressionAttributeValues: {
-      ':orgName': data.orgName || null,
+      ':nameOrg': data.nameOrg || null,
       ':parentId': data.parentId || null,
       ':foundedAt': data.foundedAt || null
     },
