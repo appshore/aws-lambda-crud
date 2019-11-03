@@ -2,7 +2,13 @@ import dynamo from '../common/dynamo';
 import { failure, success } from '../common/response';
 
 export async function main(event, context) {
-  const data = JSON.parse(event.body);
+  let data;
+  try {
+    data = JSON.parse(event.body);
+  } catch (error) {
+    return failure({ status: false, error });
+  }
+
   const params = {
     TableName: process.env.tableName,
     Key: {

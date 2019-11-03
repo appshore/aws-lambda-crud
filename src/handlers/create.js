@@ -5,7 +5,12 @@ import { failure, success } from '../common/response';
 
 export async function main(event, context, callback) {
   // Request body is passed in as a JSON encoded string in 'event.body'
-  const data = JSON.parse(event.body);
+  let data;
+  try {
+    data = JSON.parse(event.body);
+  } catch (error) {
+    return failure({ status: false, error });
+  }
 
   const foundedAt = new Date(Date.parse(data.foundedAt));
 
