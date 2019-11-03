@@ -42,7 +42,7 @@ functions:
           path: org
           method: post
           cors: true
-          authorizer: aws_iam
+          # authorizer: aws_iam
   delete:
     handler: src/handlers/delete.main
     events:
@@ -50,7 +50,7 @@ functions:
           path: org/{orgId}
           method: delete
           cors: true
-          authorizer: aws_iam
+          # authorizer: aws_iam
   list:
     handler: src/handlers/list.main
     events:
@@ -58,7 +58,7 @@ functions:
           path: org
           method: get
           cors: true
-          authorizer: aws_iam
+          # authorizer: aws_iam
   listByParentId:
     handler: src/handlers/listByParentId.main
     events:
@@ -66,7 +66,7 @@ functions:
           path: org/sub/{parentId}
           method: get
           cors: true
-          authorizer: aws_iam
+          # authorizer: aws_iam
   read:
     handler: src/handlers/read.main
     events:
@@ -74,7 +74,7 @@ functions:
           path: org/{orgId}
           method: get
           cors: true
-          authorizer: aws_iam
+          # authorizer: aws_iam
   readByName:
     handler: src/handlers/readByName.main
     events:
@@ -82,7 +82,7 @@ functions:
           path: org/name/{name}
           method: get
           cors: true
-          authorizer: aws_iam
+          # authorizer: aws_iam
   update:
     handler: src/handlers/update.main
     events:
@@ -90,4 +90,4 @@ functions:
           path: org/{orgId}
           method: put
           cors: true
-          authorizer: aws_iam
+          # authorizer: aws_iam
