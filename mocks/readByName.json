@@ -1,5 +1,5 @@
 {
   "pathParameters": {
-    "name": "Org Two"
+    "orgName": "Org Two"
   }
 }
