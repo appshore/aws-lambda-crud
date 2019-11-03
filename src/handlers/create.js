@@ -14,7 +14,7 @@ export async function main(event, context, callback) {
     Item: {
       orgId: uuid.v1(), // unique identifier
       parentId: data.parentId, // optional Id of the parent organisation
-      orgName: data.orgName, // organisation name
+      name: data.name, // organisation name
       revenue: data.revenue, // revenue
       foundedAt: foundedAt.toISOString().slice(0, 10), // date as a string YYYY-MM-DD
       createdAt: Date.now() // timestamp
